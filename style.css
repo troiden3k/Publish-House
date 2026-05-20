@@ -1,0 +1,1191 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1B1537;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ================= HEADER / FOOTER (КАК В УСЛУГАХ) ================= */
+
+header, footer {
+    background: #0B2246;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #0B2246;
+}
+
+nav {
+    margin-left: 13%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a:hover {
+    color: #a5a5ff;
+}
+
+.logo {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-right: 16%;
+}
+
+.address {
+    margin-left: 10%;
+}
+
+.social-icons {
+    margin-right: 10%;
+    display: flex;
+    gap: 15px;
+}
+
+.icon-btn img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* ================= GRID КНИГ ================= */
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+}
+
+.book-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.book-cover {
+    width: 100%;
+    max-width: 200px;
+    height: 290px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-item:hover .book-cover {
+    transform: scale(1.05);
+}
+
+.book-title {
+    margin-top: 10px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #e0e0ff;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+/* Хедер — колонкой */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+/* ЛОГО СВЕРХУ */
+.logo {
+    order: 1;
+    font-size: 20px;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+/* НАВИГАЦИЯ СНИЗУ */
+nav {
+    order: 2;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Ссылки навигации */
+nav ul li a {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+/* Hover */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Основной контент */
+main {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Грид книг */
+.books-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+/* Обложки книг */
+.book-cover {
+    max-width: 260px;
+    height: auto;
+}
+
+/* Названия книг */
+.book-title {
+    font-size: 14px;
+}
+
+/* ================= футер ================= */
+
+footer {
+    flex-direction: column;
+    padding: 20px 15px;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+}
+}
+/* ================= LOGO ANIMATION ================= */
+
+.logo {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.logo span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+}
+
+.logo span.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1B1537;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ================= HEADER / FOOTER (ТВОЙ ЕДИНЫЙ СТИЛЬ) ================= */
+
+header, footer {
+    background: #0B2246;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #0B2246;
+}
+
+nav {
+    margin-left: 13%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a:hover {
+    color: #a5a5ff;
+}
+
+.logo {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-right: 16%;
+}
+
+.address {
+    margin-left: 10%;
+}
+
+.social-icons {
+    margin-right: 10%;
+    display: flex;
+    gap: 15px;
+}
+
+.icon-btn img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+/* ================= MAIN ================= */
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+/* ================= КАРУСЕЛЬ (НЕ ТРОГАЮ ЛОГИКУ) ================= */
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 1000px;
+    margin: 50px auto;
+    height: 480px;
+    perspective: 1200px;
+}
+
+.books-carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.books-carousel .book-item {
+    position: absolute;
+    width: 265px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translate3d(0,0,-300px) scale(0.4);
+    transition: 0.8s;
+}
+
+.books-carousel .book-item.active {
+    opacity: 1;
+    transform: translate3d(0,0,0) scale(1);
+    z-index: 10;
+}
+
+.books-carousel .book-item.prev {
+    opacity: 0.4;
+    transform: translate3d(-240px,0,-150px) scale(0.8) rotateY(25deg);
+}
+
+.books-carousel .book-item.next {
+    opacity: 0.4;
+    transform: translate3d(240px,0,-150px) scale(0.8) rotateY(-25deg);
+}
+
+.book-cover {
+    width: 100%;
+    height: 340px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.book-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.book-title {
+    margin-top: 10px;
+    font-size: 13px;
+}
+.carousel-description {
+    margin-top: 20px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #ccc; /* Цвет текста */
+}
+
+@media (max-width: 768px) {
+    .carousel-description {
+        font-size: 14px; /* Уменьшаем размер шрифта на мобильных устройствах */
+        padding: 0 10px; /* Уменьшаем внутренние отступы */
+    }
+}
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+/* Хедер — колонкой */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+/* ЛОГО СВЕРХУ */
+.logo {
+    order: 1;
+    font-size: 20px;
+    margin-right: 0;
+    margin-bottom: 15px;
+}
+
+/* НАВИГАЦИЯ СНИЗУ */
+nav {
+    order: 2;
+    margin: 0 0 20px 0;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+/* Стиль ссылок навигации */
+nav ul li a {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Эффект наведения */
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Заголовок */
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+main {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Карусель */
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.books-carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+.book-item {
+    flex-shrink: 0;
+    width: 180px;
+    height: auto;
+    margin-right: 15px;
+    opacity: 1;
+    transform: none;
+    position: static;
+}
+
+/* ================= футер ================= */
+
+footer {
+    flex-direction: column;
+    padding: 20px 15px;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+    border: 0;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer-info {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+}
+}
+.logo {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.logo span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+}
+
+.logo span.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1B1537;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ================= HEADER / FOOTER (ЕДИНЫЙ СТИЛЬ) ================= */
+
+header, footer {
+    background: #0B2246;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #0B2246;
+}
+
+/* NAV */
+nav {
+    margin-left: 13%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #a5a5ff;
+}
+
+/* LOGO */
+.logo {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-right: 16%;
+}
+
+/* FOOTER LEFT */
+.address {
+    margin-left: 10%;
+}
+
+/* SOCIAL */
+.social-icons {
+    margin-right: 10%;
+    display: flex;
+    gap: 15px;
+}
+
+.icon-btn img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+.logo {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.logo span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+}
+
+.logo span.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ================= CONTACT GRID ================= */
+
+.media-grid {
+    display: grid;
+    /* Колонки будут подстраиваться под ширину: минимум 300px, максимум 1fr */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* 60px — это многовато для мобильных, 30-40px обычно достаточно */
+    margin-bottom: 40px;
+}
+
+.media-box {
+    width: 100%;
+    /* Используем aspect-ratio вместо жесткой высоты для сохранения пропорций (16/9) */
+    aspect-ratio: 16 / 9; 
+    background: #222244;
+    border-radius: 8px; /* Чуть увеличил скругление */
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    /* Плавное появление тени при наведении */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.5);
+}
+
+.media-box iframe,
+.media-box img {
+    width: 100%;
+    height: 100%;
+    display: block; /* Убирает лишние отступы снизу */
+    object-fit: cover;
+    border: none;
+}
+
+/* TEXT SECTION */
+.contacts-info {
+    font-size: 1.25rem; /* Лучше использовать rem для масштабируемости */
+    line-height: 1.6;
+    color: #e0e0ff;
+}
+
+.contacts-info a {
+    color: #8c8cff; /* Цвет ссылки по умолчанию */
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+}
+
+.contacts-info a:hover {
+    color: #a5a5ff;
+    text-decoration: underline;
+}
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+    /* Хедер: колонкой */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 15px;
+    }
+
+    /* ЛОГО СВЕРХУ */
+    .logo {
+        order: 1;
+        font-size: 20px;
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+
+    /* НАВИГАЦИЯ СНИЗУ */
+    nav {
+        order: 2;
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 8px 12px;
+        border-radius: 4px;
+        transition: background 0.3s;
+    }
+
+    nav ul li a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Основной контент */
+    main {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .media-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-bottom: 40px;
+    }
+
+    .media-box {
+        height: 220px;
+    }
+
+    .contacts-info {
+        font-size: 20px;
+        line-height: 1.5;
+    }
+
+    .icon-btn img {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        flex-direction: column;
+        padding: 20px 15px;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    footer p {
+        margin: 10px 0;
+        font-size: 14px;
+        color: #aaa;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 40px;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+.logo {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.logo span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+}
+
+.logo span.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1B1537;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ================= HEADER / FOOTER (ОДИН СТИЛЬ НА ВСЕ СТРАНИЦЫ) ================= */
+
+header, footer {
+    background: #0B2246;
+    padding: 40px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    font-size: 14px;
+    color: #aaa;
+    border-top: 1px solid #0B2246;
+}
+
+nav {
+    margin-left: 13%;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a:hover {
+    color: #a5a5ff;
+}
+
+.logo {
+    font-family: 'Caveat', cursive;
+    font-size: 32px;
+    letter-spacing: 2px;
+    margin-right: 16%;
+}
+
+.address {
+    margin-left: 10%;
+}
+
+.social-icons {
+    margin-right: 10%;
+    display: flex;
+    gap: 15px;
+}
+
+.icon-btn img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+/* ================= MAIN ================= */
+
+main {
+    flex: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 50px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.services-item {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.service-image {
+    width: 280px;
+    height: 200px;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #222244;
+    flex-shrink: 0;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-info h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.service-info p,
+.service-info ul li {
+    color: #e0e0ff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.service-info ul {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+/* Хедер: колонкой */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 15px;
+}
+
+/* ЛОГО СВЕРХУ */
+.logo {
+    order: 1;
+    font-size: 20px;
+    margin-bottom: 15px;
+    margin-right: 0;
+}
+
+/* НАВИГАЦИЯ СНИЗУ */
+nav {
+    order: 2;
+    margin: 0 0 20px 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+}
+
+nav ul li a {
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Основной контент */
+main {
+    padding: 20px 10px;
+    text-align: center;
+}
+
+/* Заголовок */
+h1 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+/* Услуги */
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.services-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+}
+
+/* Изображения услуг */
+.service-image {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #222244;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Текст внутри */
+.service-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-info p,
+.service-info ul li {
+    font-size: 15px;
+    line-height: 1.5;
+    color: #e0e0ff;
+}
+
+.service-info ul {
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 0 10px;
+}
+
+/* ================= футер ================= */
+
+footer {
+    flex-direction: column;
+    padding: 20px 15px;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+}
+
+footer p {
+    margin: 10px 0;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-social {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    width: 100%;
+}
+}
+/* ================= LOGO ANIMATION ================= */
+
+.logo {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.logo span {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+}
+
+.logo span.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
